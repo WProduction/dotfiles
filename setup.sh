@@ -35,3 +35,6 @@ mv ~/.dotfiles/feh/.fehbg ~/
 ln ~/.fehbg ~/.dotfiles/feh
 chmod +x ~/.fehbg
 
+mkdir ~/.config/touchpad_changes/30-enable-natural-crolling-default.conf
+mv ~/.dotfiles/touchpad_changes/30-enable-natural-crolling-default.conf /usr/share/X11/xorg.conf.d/
+sudo ln /usr/share/X11/xorg.conf.d/30-enable-natural-crolling-default.conf ~/.dotfiles/touchpad_changes
