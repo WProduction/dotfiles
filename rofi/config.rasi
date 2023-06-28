@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "FiraCode Nerd Font:style=Regular;2";
+  font: "FiraCode Nerd Font Mono:style=Regular 13";
   modi: "window,run,drun";
 }
 

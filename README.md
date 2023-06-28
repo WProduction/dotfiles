@@ -17,10 +17,10 @@ compton
 lxsession
 network-manager
 fonts-font-awesome
-unzip
 lxappearence
 gnome-themes-extra
 network-manager-openvpn   openvpn   openvpn-systemd-resolved
 ranger
-
+fish
+neofetch
 

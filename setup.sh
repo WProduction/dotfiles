@@ -13,7 +13,7 @@ ln ~/.config/fish/config.fish ~/.dotfiles/fish
 
 mkdir ~/.config/kitty/
 mv ~/.dotfiles/kitty/kitty.conf ~/.config/kitty
-ln ~/.config/kitty ~/.dotfiles/kitty
+ln ~/.config/kitty/kitty.conf ~/.dotfiles/kitty
 
 mkdir ~/.config/polybar/
 mv ~/.dotfiles/polybar/config.ini  ~/.config/polybar
@@ -35,6 +35,5 @@ mv ~/.dotfiles/feh/.fehbg ~/
 ln ~/.fehbg ~/.dotfiles/feh
 chmod +x ~/.fehbg
 
-mkdir ~/.config/touchpad_changes/30-enable-natural-crolling-default.conf
-mv ~/.dotfiles/touchpad_changes/30-enable-natural-crolling-default.conf /usr/share/X11/xorg.conf.d/
-sudo ln /usr/share/X11/xorg.conf.d/30-enable-natural-crolling-default.conf ~/.dotfiles/touchpad_changes
+sudo mv ~/.dotfiles/touchpad_changes/30-enable-natural-crolling-default.conf /etc/X11/xorg.conf.d/
+sudo ln /etc/X11/xorg.conf.d/30-enable-natural-crolling-default.conf ~/.dotfiles/touchpad_changes
