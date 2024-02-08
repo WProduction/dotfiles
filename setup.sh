@@ -3,6 +3,8 @@
 git clone https://github.com/WProduction/Fonts.git ~/.local/share/fonts
 git clone https://github.com/WProduction/Wallpapers.git ~/Wallpapers
 
+curl -sS https://starship.rs/install.sh | sh
+
 mkdir ~/.config/awesome/
 mv ~/.dotfiles/awesome/rc.lua ~/.config/awesome
 ln ~/.config/awesome/rc.lua ~/.dotfiles/awesome
@@ -37,3 +39,6 @@ chmod +x ~/.fehbg
 
 sudo mv ~/.dotfiles/touchpad_changes/30-enable-natural-crolling-default.conf /etc/X11/xorg.conf.d/
 sudo ln /etc/X11/xorg.conf.d/30-enable-natural-crolling-default.conf ~/.dotfiles/touchpad_changes
+
+mv ~/.dotfiles/starship/starship.toml ~/.config/
+ln ~/.config/starship.toml  ~/.dotfiles/starship/

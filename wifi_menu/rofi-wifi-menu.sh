@@ -11,7 +11,7 @@ elif [[ "$connected" =~ "disabled" ]]; then
 	toggle="󰖩  Enable Wi-Fi"
 fi
 
-echo $wifi_list
+#echo $wifi_list
 
 # Use rofi to select wifi network
 chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID: " )

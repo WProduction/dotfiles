@@ -246,9 +246,10 @@ globalkeys = gears.table.join(
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey },            "Tab",     function () awful.util.spawn("rofi -show window")end), 
+    awful.key({ modkey },            "l",     function () awful.util.spawn("betterlockscreen -l")end), 
 
     -- Prompt
-    awful.key({ modkey },            "b",     function () awful.util.spawn("chromium") end,
+    awful.key({ modkey },            "b",     function () awful.util.spawn("thorium-browser") end,
               {description = "Chromium", group = "web"}),
 
 
@@ -508,6 +509,5 @@ awful.spawn.with_shell("compton")
 --awful.spawn.with_shell("kmix")
 --awful.spawn.with_shell("nm-applet")
 --awful.spwan("kitty", {tag = "2"})
-awful.spawn("chromium",{ tag = "3"})
 
 --TEST

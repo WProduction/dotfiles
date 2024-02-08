@@ -10,7 +10,7 @@ neovim
 polybar
 feh
 pcmanfm
-thunar
+thunar thunar-archive-plugin
 firefox
 chromium-browser
 compton
