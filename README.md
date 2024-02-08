@@ -1,7 +1,9 @@
 Installed Prorams:
 
 SDDM -- Login Manager
+
 Kitty -- Terminal
+
 XTerm  --Teaminal
 awesome  -- Window Manager
 dmenue  -- Applicaktion Menue
