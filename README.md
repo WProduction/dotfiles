@@ -1,5 +1,6 @@
 Installed Prorams:
 
+Nala -- Apt Frontend
 SDDM -- Login Manager   
 Kitty -- Terminal   
 XTerm  --Teaminal   
@@ -24,3 +25,5 @@ ranger -- Terminal based Filemanager
 fish -- shell   
 neofetch -- System Monitor   
 htop -- live System monitor   
+
+(Starship -- Shell Prompt)
