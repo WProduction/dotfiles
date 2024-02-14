@@ -72,8 +72,11 @@ sudo nala install thorium-browser
 #change Touchpad settings
 sudo ln -s ~/.dotfiles/.nocopy/touchpad_settings/30-enable-natural-crolling-default.conf /etc/X11/xorg.conf.d/
 
+#link sddm Theme
+sudo ln -s ~/.dotfiles/.nocopy/SDDMTheme/sddm-chili/ /usr/share/sddm/themes/
+
 #Make scripts executable
-chmod +x ~/.config/polybar/launch.sh
-chmod +x ~/wifi_menu/rofi-wifi-menu.sh
-chmod +x ~/.fehbg
+sudo chmod +x ~/.config/polybar/launch.sh
+sudo chmod +x ~/wifi_menu/rofi-wifi-menu.sh
+sudo chmod +x ~/.fehbg
 

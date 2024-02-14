@@ -3,7 +3,7 @@
 sudo apt update && sudo apt upgrade   
 sudo apt install nala   
 sudo nala install git   
-git clone https://github.com/WProduction/dotfiles.git ~/.dotfiles
+git clone --recursive https://github.com/WProduction/dotfiles.git ~/.dotfiles
 chmod +x ~/.dotfiles/setup.sh
 ~/.dotfiles/setup.sh
 
