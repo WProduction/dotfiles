@@ -68,3 +68,13 @@ http://dl.thorium.rocks/debian/dists/stable/thorium.list && \
 sudo apt update
 
 sudo nala install thorium-browser
+
+#change Touchpad settings
+sudo mv ~/.dotfiles/touchpad_changes/30-enable-natural-crolling-default.conf /etc/X11/xorg.conf.d/
+sudo ln /etc/X11/xorg.conf.d/30-enable-natural-crolling-default.conf ~/.dotfiles/touchpad_changes
+
+#Make scripts executable
+chmod +x ~/.config/polybar/launch.sh
+chmod +x ~/wifi_menu/rofi-wifi-menu.sh
+chmod +x ~/.fehbg
+
