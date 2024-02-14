@@ -70,8 +70,7 @@ sudo apt update
 sudo nala install thorium-browser
 
 #change Touchpad settings
-sudo mv ~/.dotfiles/touchpad_changes/30-enable-natural-crolling-default.conf /etc/X11/xorg.conf.d/
-sudo ln /etc/X11/xorg.conf.d/30-enable-natural-crolling-default.conf ~/.dotfiles/touchpad_changes
+sudo ln -s ~/.dotfiles/.nocopy/touchpad_settings/30-enable-natural-crolling-default.conf /etc/X11/xorg.conf.d/
 
 #Make scripts executable
 chmod +x ~/.config/polybar/launch.sh
