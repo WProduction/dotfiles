@@ -1,44 +1,62 @@
 #!/bin/bash
 
+
+#install of base applications
+sudo nala install \
+    kitty \
+    xterm \
+    awesome \
+    dmenu \
+    rofi \
+    polybar \
+    feh \
+    pcmanfm \
+    thunar thunar-archive-plugin \
+    firefox \
+    compton \
+    lxsession \
+    network-manager \
+    fonts-font-awesome \
+    lxappearence \
+    gnome-themes-extra \
+    network-manager-openvpn openvpn openvpn-systemd-resolved \
+    ranger \
+    fish \
+    neofetch \
+    htop \
+    stow
+
+#insatll of latest Version of NeoVim
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo nala install neovim
+
+#Get fonts and Wallpapers
 git clone https://github.com/WProduction/Fonts.git ~/.local/share/fonts
 git clone https://github.com/WProduction/Wallpapers.git ~/Wallpapers
 
+#insatll of Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
 
-mkdir ~/.config/awesome/
-mv ~/.dotfiles/awesome/rc.lua ~/.config/awesome
-ln ~/.config/awesome/rc.lua ~/.dotfiles/awesome
+#insall of betterlockscreen
+sudo nala install xdpyinfo xrandr xrdb xset imagemagick
+sudo apt install autoconf gcc make pkg-config libpam0g-dev libcairo2-dev libfontconfig1-dev libxcb-composite0-dev libev-dev libx11-xcb-dev libxcb-xkb-dev libxcb-xinerama0-dev libxcb-randr0-dev libxcb-image0-dev libxcb-util0-dev libxcb-xrm-dev libxkbcommon-dev libxkbcommon-x11-dev libjpeg-dev
+git clone https://github.com/Raymo111/i3lock-color.git
+cd i3lock-color
+./build.sh
+./install-i3lock-color.sh
+cd ~
 
-mkdir ~/.config/fish/
-mv ~/.dotfiles/fish/config.fish ~/.config/fish
-ln ~/.config/fish/config.fish ~/.dotfiles/fish
+wget https://raw.githubusercontent.com/betterlockscreen/betterlockscreen/main/install.sh -O - -q | sudo bash -s system
 
-mkdir ~/.config/kitty/
-mv ~/.dotfiles/kitty/kitty.conf ~/.config/kitty
-ln ~/.config/kitty/kitty.conf ~/.dotfiles/kitty
+betterlockscreen -u ~/Wallpapers/fantasySky.jpg --fx blur
 
-mkdir ~/.config/polybar/
-mv ~/.dotfiles/polybar/config.ini  ~/.config/polybar
-ln ~/.config/polybar/config.ini ~/.dotfiles/polybar
-mv ~/.dotfiles/polybar/launch.sh ~/.config/polybar
-chmod +x ~/.config/polybar/launch.sh
-ln ~/.config/polybar/launch.sh ~/.dotfiles/polybar
+#set fish as standard Shell
+chsh -s $(which fish)
 
-mkdir ~/.config/rofi/
-mv ~/.dotfiles/rofi/config.rasi ~/.config/rofi
-ln ~/.config/rofi/config.rasi ~/.dotfiles/rofi
+#install of NeoVim Pacman
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\\\n ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-mkdir ~/rofi_wifi_menu
-mv ~/.dotfiles/wifi_menu/rofi-wifi-menu.sh ~/rofi_wifi_menu
-ln ~/rofi_wifi_menu/rofi-wifi-menu.sh ~/.dotfiles/wifi_menu
-chmod +x ~/rofi_wifi_menu/rofi-wifi-menu.sh
-
-mv ~/.dotfiles/feh/.fehbg ~/
-ln ~/.fehbg ~/.dotfiles/feh
-chmod +x ~/.fehbg
-
-sudo mv ~/.dotfiles/touchpad_changes/30-enable-natural-crolling-default.conf /etc/X11/xorg.conf.d/
-sudo ln /etc/X11/xorg.conf.d/30-enable-natural-crolling-default.conf ~/.dotfiles/touchpad_changes
-
-mv ~/.dotfiles/starship/starship.toml ~/.config/
-ln ~/.config/starship.toml  ~/.dotfiles/starship/
+cd .dotfiles
+sudo stow .
+cd ~
