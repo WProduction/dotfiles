@@ -12,12 +12,10 @@ sudo nala install \
     feh \
     pcmanfm \
     thunar thunar-archive-plugin \
-    firefox \
     compton \
     lxsession \
     network-manager \
     fonts-font-awesome \
-    lxappearence \
     gnome-themes-extra \
     network-manager-openvpn openvpn openvpn-systemd-resolved \
     ranger \
@@ -84,3 +82,6 @@ sudo chmod +x ~/.config/polybar/launch.sh
 sudo chmod +x ~/wifi_menu/rofi-wifi-menu.sh
 sudo chmod +x ~/.fehbg
 
+cd ~/.dotfiles
+sudo stow .
+cd ~

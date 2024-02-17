@@ -1,0 +1,3 @@
+[submodule ".nocopy/SDDMTheme/sddm-chili"]
+	path = .nocopy/SDDMTheme/sddm-chili
+	url = https://github.com/WProduction/sddm-chili.git
